@@ -1,0 +1,27 @@
+/*inicio clases generales*/
+/*w3schools.com*/
+
+.centrar {
+    text-align: center;
+}
+
+.container-fluid{
+    max-width: 1000px !important;
+}
+
+.sin-item{
+    list-style: none;
+}
+
+.margin-top{
+    margin-top: 20px !important;
+
+}
+
+.margin-top2{
+    margin-top: 10px !important;
+}
+
+.margin-top3{
+    margin-top: 70px !important;
+}

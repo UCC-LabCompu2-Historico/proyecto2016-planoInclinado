@@ -2,89 +2,225 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano Inclinado</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script><!--primero se añade jquery despues bootstrap-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
-<header>
-    <h1 style="text-align: center;"><pre>P L A N O    I N C L I N A D O</pre></h1>
+<div class="container-fluid">
 
-</header>
-    <div>
+    <header class="row centrar">
+        <h2><pre>P L A N O    I N C L I N A D O.</pre></h2>
+    </header>
 
-     <div class="componentes">
-         <b>*Figura</b>
-         <b>*Peso de la figura</b>
-         <b>*Angulo de la rampa</b>
-         <b>*Distancia de la hipotenusa de la rampa</b>
-         <b>*Tiempo de bajada</b>
-     </div>
-        <div class="textos">
-    <select name="Figura"><br>
-        <option value="Cuadrado">Cuadrado</option><br>
-        <option value="Triángulo">Triángulo</option><br>
-        <option value="Rectángulo">Rectángulo</option><br>
-    </styleselect> <br>
+    <!-- Nav tabs -->
+    <nav class="row">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="#active"><a href="#calculo" aria-controls="calculo" role="tab" data-toggle="tab">Calculo</a></li>
+            <li role="presentation"><a href="#ejemplo" aria-controls="ejemplo" role="tab" data-toggle="tab">Ejemplo</a></li>
+            <li role="presentation"><a href="#conceptos" aria-controls="conceptos" role="tab" data-toggle="tab">Conceptos</a></li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <!-- Tab panes -->
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="calculo">
+
+
+                <div class="row margin-top">
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>*Figura</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-offset-3 col-md-3">
+                        <select class="form-control" name="Figura">
+                            <option value="Cuadrado">Cuadrado</option>
+                            <option value="Triángulo">Triángulo</option>
+                            <option value="Rectángulo">Rectángulo</option>
+                        </select>
+                    </div>
+                </div>
 
 
 
-    <input type="text" name="Ingrese Dato">
-    <select name="Peso">
-        <option value="Kg">Kg</option>
-        <option value="g">g</option>
-        <option value="cg">cg</option>
-    </select> <br>
+                <div class="row margin-top2">
 
-    <input type="text" name="Ingrese Dato">
-    <b>º</b><br>
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>*Peso de la figura</li>
+                        </ul>
+                    </div>
 
-    <input type="text" name="Ingrese Dato">
-    <select name="Distancia">
-        <option value="Km">Km</option>
-        <option value="m">m</option>
-        <option value="cm">cm</option>
-    </select> <br>
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato">
+                    </div>
 
-    <input type="text" name="Ingrese Dato">
-    <select name="Tiempo">
-        <option value="Horas">Horas</option>
-        <option value="Minutos">Minutos</option>
-        <option value="Segundos">Segundos</option>
-    </select> <br>
+                    <div class="col-md-3">
+                        <select class="form-control" name="Peso">
+                            <option value="Kg">Kg</option>
+                            <option value="g">g</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div class="row margin-top2">
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>*Ángulo de la rampa (expresado en grados)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato">
+                    </div>
+
+
+                </div>
+
+                <div class="row margin-top2">
+                    <div class="col-md-6">
+                        <ul>
+                            <il>*Distancia de la hipotenusa de la rampa</il>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-control" name="Distancia">
+                            <option value="Km">Km</option>
+                            <option value="m">m</option>
+                            <option value="cm">cm</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row margin-top2">
+                    <div class="col-md-6">
+                        <ul>
+                            <il>*Tiempo de bajada</il>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-control"name="Tiempo">
+                            <option value="Horas">Horas</option>
+                            <option value="Minutos">Minutos</option>
+                            <option value="Segundos">Segundos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row margin-top">
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>*Campos obligatorios</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row margin-top">
+                    <div class="col-md-12">
+                        <img src="img/separador.png" alt="separador">
+                    </div>
+                </div>
+
+                <div class="row margin-top">
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>Calcular</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <select class="form-control" name="Calculos">
+                            <option value="Coeficiente">Coeficiente de fricción entre la figura y el plano</option>
+                            <option value="Fuerza">Fuerza de fricción que actua sobre la figura</option>
+                            <option value="Rapidez">Rapidéz del bloque despues de que se ha desplazado la distancia</option>
+
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div class="row margin-top2">
+                    <div class="col-md-6">
+                        <ul class="sin-item">
+                            <li>Resultado</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input class="form-control" id="disabledInput" type="text" placeholder="Resultado" disabled>
+                    </div>
+
+
+                </div>
+
+                <div class="row margin-top3">
+                    <div class="col-md-offset-4 col-md-7">
+                        <img src="img/animacion.gif" alt="animacion">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane" id="ejemplo">
+                <div class="row margin-top">
+                    <div class="col-md-12">
+                        <img src="img/uno.jpg" alt="ejemplo1">
+                    </div>
+
+                </div>
+
+                <div class="row margin-top">
+                    <div class="col-md-6">
+                        <img src="img/dos.jpg" alt="ejemplo2">
+                    </div>
+
+                    <div class="col-md-offset-2 col-md-4">
+                        <img src="img/tres.jpg" alt="ejemplo3">
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="conceptos">
+
+                <div class="row margin-top">
+                    <div class="col-md-3">
+                        <img src="img/cuatro.jpg" alt="conceptos wikipedia">
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <div>
+</div>
 
-    <h2>Calcular:
-    <select name="Calculos">
-        <option value="Coeficiente">Coeficiente de fricción entre la figura y el plano</option>
-        <option value="Fuerza">Fuerza de fricción que actua sobre la figura</option>
-        <option value="Rapidez">Rapidéz del bloque despues de que se ha desplazado la distancia</option>
-    </select> <br>
-    </h2>
-    <h3>Resultado:</h3>
-
-     </div>
-
-    <html>
-    <body background="img\13492420345f-12109_53f04c9bd20b1b8ef3f7ff0199b25d60_raw.jpg">
-
-    <h3>Ejemplo de imagen de fondo</h3>
-
-    <p>Se pueden utilizar archivos en formato jpg, gif o png. No es recomendable usar otro formato.</p>
-
-    <p>Si la imagen es más pequeña que la página, se repetirá en mozaico.>
-
-    </body>
-    </html>
-
-
-
-
-
-    <br>
-    <br>
-    <b>*Campos obligatorios.</b> <br>
 </body>
 </html>
