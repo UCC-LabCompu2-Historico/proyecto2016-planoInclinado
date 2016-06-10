@@ -33,3 +33,6 @@
 .rojo{
     color: red;
 }
+.red{
+    border: 1px solid red !important;
+}
