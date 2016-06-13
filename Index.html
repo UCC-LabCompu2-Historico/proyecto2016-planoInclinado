@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/formularios.js"></script> <!-- Validacion de formularios -->
     <script type="text/javascript" src="js/calculos.js"></script>
-    <script type="text/javascript" src="js/canvas.js"></script>
+
 
 </head>
 <body>
@@ -40,7 +40,7 @@
                 <div class="row margin-top">
                     <div class="col-md-6">
                         <ul class="sin-item font-size">
-                            <li>*Figura</li>
+                            <li>Figura</li>
                         </ul>
                     </div>
 
@@ -134,11 +134,8 @@
                 </div>
 
                 <div class="row margin-top">
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-success btn-primary  btn-md btn-block"  id="bcalcular" onclick="calcular()">Calcular</button>
-                    </div>
 
-                    <div class="col-md-offset-3  col-md-6">
+                    <div class="col-md-offset-6 col-md-6">
                         <select class="form-control" name="Calculos" id="select-calculos">
                             <option value="1">Coeficiente de fricción entre la figura y el plano</option>
                             <option value="2">Fuerza de fricción que actua sobre la figura</option>
@@ -151,13 +148,13 @@
                 </div>
 
                 <div class="row margin-top2">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <ul class="sin-item font-size">
-                            <li>RESULTADO</li>
+                            <button type="button" class="btn btn-success btn-primary  btn-md btn-block"  id="bcalcular" onclick="calcular()">Calcular</button>
                         </ul>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-offset-3 col-md-6">
                         <input class="form-control" id="resultado" type="text" placeholder="Resultado" disabled>
                     </div>
 
@@ -166,9 +163,20 @@
 
                 <div class="row margin-top3">
                     <div class="col-md-offset-4 col-md-7">
-                        <canvas id="canvas" width="300" height="300" style="border: 1px solid black;">
+                        <canvas id="miCanvas" width="300" height="300" style="border: 1px solid white;">Tu navegador no puede mostrar este contenido</canvas>
 
-                        </canvas>
+                        <script type="text/javascript" charset="utf-8">
+
+                            var canvas=document.getElementById("miCanvas");
+                            var ctx = canvas.getContext("2d");
+
+                            ctx.moveTo(0,0);
+                            ctx.lineTo(299,299);
+                            ctx.lineTo(0,299);
+                            ctx.lineTo(0,0);
+                            ctx.stroke();
+
+                        </script>
                     </div>
 
                 </div>
@@ -180,7 +188,7 @@
             <div role="tabpanel" class="tab-pane" id="ejemplo">
                 <div class="row margin-top">
                     <div class="col-md-12">
-                       <p>Un bloque de 3Kg. parte del reposo en la parte superior de una pendiente de 30°, y se desliza 2 metros hacia abajo en 1,5s. Encuentre:</p>
+                        <p>Un bloque de 3Kg. parte del reposo en la parte superior de una pendiente de 30°, y se desliza 2 metros hacia abajo en 1,5s. Encuentre:</p>
                         <ul class="sin-item">
                             <li>A)La magnitud de la aceleración del bloque.</li>
                             <li>B)El coeficiente de fricción cinética entre el bloque y el plano</li>
@@ -223,16 +231,15 @@
                             <li>En primer lugar se debe considerar la existencia de una fuerza de gravedad, también conocida como peso, que es consecuencia de la masa (<b>M</b>) que posee el cuerpo apoyado en el plano inclinado y tiene una magnitud de M.g con una dirección vertical y representada en la figura por la letra <b>G</b>.</li>
                             <li>Existe además una fuerza normal (<b>N</b>), también conocida como la fuerza de reacción ejercida sobre el cuerpo por el plano como consecuencia de la tercera ley de Newton, se encuentra en una dirección perpendicular al plano y tiene una magnitud igual a la fuerza ejercida por el plano sobre el cuerpo. En la figura aparece representada por N y tiene la misma magnitud que <b>F<sub>2</sub></b>= M.g.cosα y sentido opuesto a la misma.</li>
                             <li>Existe finalmente una fuerza de rozamiento, también conocida como fuerza de fricción (<b>F<sub>R</sub></b>), que siempre se opone al sentido del movimiento del cuerpo respecto a la superficie, su magnitud depende tanto del peso como de las características superficiales del plano inclinado y la superficie en contacto del cuerpo que proporcionan un coeficiente de rozamiento. Esta fuerza debe tener un valor igual a <b>F<sub>1</sub></b>=M.g.senα para que el cuerpo se mantenga en equilibrio. En el caso en que F<sub>1</sub> fuese mayor que la fuerza de rozamiento el cuerpo se deslizaría hacia abajo por el plano inclinado. Por tanto para subir el cuerpo se debe realizar una fuerza con una magnitud que iguale o supere la suma de F<sub>1</sub> + F<sub>R</sub>.</li>
-                            </ul>
+                        </ul>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <img src="img/planoinclinado.svg.png" alt="">
                     </div>
                 </div>
 
             </div>
-        </div>
     </div>
 
 </div>
