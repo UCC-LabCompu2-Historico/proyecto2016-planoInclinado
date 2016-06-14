@@ -1,13 +1,13 @@
 function calcular() {
-    //Coeficiente de fricción entre la figura y el plano
+    //Calculo de coeficiente de fricción entre la figura y el plano
     if(document.getElementById("select-calculos").value == 1) {
         var resultado=document.getElementById("resultado").value;
-        var anguloxd=document.getElementById("input-angulo").value;
-        var radianes=anguloxd*Math.PI/180;
+        var angulovalor=document.getElementById("input-angulo").value;
+        var radianes=angulovalor*Math.PI/180;
         document.getElementById("resultado").value=document.getElementById("input-peso-figura").value * 9.8 * Math.sin(radianes) + " Newton";
     }
 
-    //Fuerza de fricción que actua sobre la figura
+    //Calculo de fuerza de fricción que actúa sobre la figura
     if (document.getElementById("select-calculos").value == 2) {
 
         var anguloxd2=document.getElementById("input-angulo").value;
@@ -19,7 +19,7 @@ function calcular() {
         document.getElementById("resultado").value=(coefriccion - (document.getElementById("input-peso-figura").value * aceleracion)) / N +" Newton";
     }
 
-    //Rapidéz del bloque despues de que se ha desplazado la distancia
+    //Calculo de rapidéz del bloque despues de que se ha desplazado la distancia ingresada
     if(document.getElementById("select-calculos").value == 3)
     {
         var aceleracion2=(2*document.getElementById("input-distancia").value) / (document.getElementById("input-tiempo").value*document.getElementById("input-tiempo").value);

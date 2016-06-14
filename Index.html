@@ -170,12 +170,46 @@
                             var canvas=document.getElementById("miCanvas");
                             var ctx = canvas.getContext("2d");
 
+                            //TRIANGULO
+                            //Radio vector
                             ctx.moveTo(0,0);
-                            ctx.lineTo(299,299);
-                            ctx.lineTo(0,299);
-                            ctx.lineTo(0,0);
+                            ctx.lineTo(300,300);
+                            ctx.stroke();
+                            //Cateto opuesto
+                            ctx.moveTo(0,0);
+                            ctx.lineTo(0,300);
+                            ctx.stroke();
+                            //Cateto adyacente
+                            ctx.moveTo(0,300);
+                            ctx.lineTo(300,300);
                             ctx.stroke();
 
+                            //FIGURA
+                            //Lado izquierdo
+                            ctx.moveTo(100,100);
+                            ctx.lineTo(150,50);
+                            ctx.stroke();
+                            //Lado derecho
+                            ctx.moveTo(150,150);
+                            ctx.lineTo(200,100);
+                            ctx.stroke();
+                            //Lado arriba
+                            ctx.moveTo(150,50);
+                            ctx.lineTo(200,100);
+                            ctx.stroke();
+                            //FLECHA
+                            //Largo
+                            ctx.moveTo(175,125);
+                            ctx.lineTo(250,200);
+                            ctx.stroke();
+                            //Extremos
+                            ctx.moveTo(250,200);
+                            ctx.lineTo(225,150);
+                            ctx.stroke();
+
+                            ctx.moveTo(250,200);
+                            ctx.lineTo(200,175);
+                            ctx.stroke();
                         </script>
                     </div>
 

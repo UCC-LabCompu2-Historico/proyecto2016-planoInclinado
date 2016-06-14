@@ -1,18 +1,17 @@
 /**
  * Created by Enzo on 09/06/2016.
  */
-/* En este archivo validamos los formularios (damos error si el usuario mete algo que no sea un numero, etc */
 
-
+//En este archivo validamos los formularios (damos error si el usuario ingresa algo que no sea un numero. (isNaN)
 
 $(document).on("ready",function ()
 {
-    /* Tomo los valores que hay en cada input y los igualo a una variable */
-    //.value significa que toma el valor
+    //Tomo los valores que hay en cada input y los igualo a una variable 
+    //NOTA: .value significa que toma el valor
 
     $("#input-peso-figura").keyup(function () {
 
-        var peso = document.getElementById("input-peso-figura").value; //.value significa que toma el valor
+        var peso = document.getElementById("input-peso-figura").value; 
        if(isNaN(peso))
        {
            $("#input-peso-figura").addClass("red");
@@ -61,8 +60,3 @@ $(document).on("ready",function ()
         }
     });
 });
-
-
-var resultado = 3;//resultado del calculo
-
-    document.getElementById("input-resultado").value= resultado;
