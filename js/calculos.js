@@ -4,7 +4,7 @@ function calcular() {
         var resultado=document.getElementById("resultado").value;
         var angulovalor=document.getElementById("input-angulo").value;
         var radianes=angulovalor*Math.PI/180;
-        document.getElementById("resultado").value=document.getElementById("input-peso-figura").value * 9.8 * Math.sin(radianes) + " Newton";
+        document.getElementById("resultado").value=document.getElementById("input-peso-figura").value * 9.8 * Math.sin(radianes) + " MU";
     }
 
     //Calculo de fuerza de fricción que actúa sobre la figura
@@ -29,6 +29,44 @@ function calcular() {
 
 }
 
+
+//CONVERSION DE UNIDADES
+//4=gramos; 5=toneladas; 6=centimetros; 7=kilometros; 8=minutos; 9=horas
+function calcular2() {
+
+    //PESO
+    if(document.getElementById("select-conversionpeso").value == 4)
+    {
+        document.getElementById("resultado-conversionpeso").value= document.getElementById("input-pesoconversion").value / 1000 +" Kilogramos";
+    }
+
+    if(document.getElementById("select-conversionpeso").value == 5)
+    {
+        document.getElementById("resultado-conversionpeso").value= document.getElementById("input-pesoconversion").value * 1000 +" Kilogramos";
+    }
+
+    //DISTANCIA
+    if(document.getElementById("select-conversiondistancia").value == 6)
+    {
+        document.getElementById("resultado-conversiondistancia").value= document.getElementById("input-distanciaconversion").value / 100 +" Metros";
+    }
+
+    if(document.getElementById("select-conversiondistancia").value == 7)
+    {
+        document.getElementById("resultado-conversiondistancia").value= document.getElementById("input-distanciaconversion").value * 1000 +" Metros";
+    }
+
+    //TIEMPO
+    if(document.getElementById("select-conversiontiempo").value == 8)
+    {
+        document.getElementById("resultado-conversiontiempo").value= document.getElementById("input-tiempoconversion").value * 60 +" Segundos";
+    }
+
+    if(document.getElementById("select-conversiontiempo").value == 9)
+    {
+        document.getElementById("resultado-conversiontiempo").value= document.getElementById("input-tiempoconversion").value * 3600 +" Segundos";
+    }
+}
 
 
 

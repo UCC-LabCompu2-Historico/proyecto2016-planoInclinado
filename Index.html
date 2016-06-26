@@ -6,27 +6,22 @@
     <title>Plano Inclinado</title>
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script><!--primero se añade jquery despues bootstrap-->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/formularios.js"></script> <!-- Validacion de formularios -->
-    <script type="text/javascript" src="js/calculos.js"></script>
-
 
 </head>
-<body>
-
+<body onload="canvass()">
 <div class="container-fluid">
 
     <header class="row centrar">
         <h2><pre>P L A N O    I N C L I N A D O.</pre></h2>
     </header>
 
-    <!-- Nav tabs -->
+    <!-- PESTAÑAS -->
     <nav class="row">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="#active"><a href="#calculo" aria-controls="calculo" role="tab" data-toggle="tab">Calculo</a></li>
             <li role="presentation"><a href="#ejemplo" aria-controls="ejemplo" role="tab" data-toggle="tab">Ejemplo</a></li>
             <li role="presentation"><a href="#conceptos" aria-controls="conceptos" role="tab" data-toggle="tab">Conceptos</a></li>
+            <li role="presentation"><a href="#conversion" aria-controls="conversion" role="tab" data-toggle="tab">Conversor de unidades</a></li>
         </ul>
     </nav>
 
@@ -163,54 +158,9 @@
 
                 <div class="row margin-top3">
                     <div class="col-md-offset-4 col-md-7">
-                        <canvas id="miCanvas" width="300" height="300" style="border: 1px solid white;">Tu navegador no puede mostrar este contenido</canvas>
-
-                        <script type="text/javascript" charset="utf-8">
-
-                            var canvas=document.getElementById("miCanvas");
-                            var ctx = canvas.getContext("2d");
-
-                            //TRIANGULO
-                            //Radio vector
-                            ctx.moveTo(0,0);
-                            ctx.lineTo(300,300);
-                            ctx.stroke();
-                            //Cateto opuesto
-                            ctx.moveTo(0,0);
-                            ctx.lineTo(0,300);
-                            ctx.stroke();
-                            //Cateto adyacente
-                            ctx.moveTo(0,300);
-                            ctx.lineTo(300,300);
-                            ctx.stroke();
-
-                            //FIGURA
-                            //Lado izquierdo
-                            ctx.moveTo(100,100);
-                            ctx.lineTo(150,50);
-                            ctx.stroke();
-                            //Lado derecho
-                            ctx.moveTo(150,150);
-                            ctx.lineTo(200,100);
-                            ctx.stroke();
-                            //Lado arriba
-                            ctx.moveTo(150,50);
-                            ctx.lineTo(200,100);
-                            ctx.stroke();
-                            //FLECHA
-                            //Largo
-                            ctx.moveTo(175,125);
-                            ctx.lineTo(250,200);
-                            ctx.stroke();
-                            //Extremos
-                            ctx.moveTo(250,200);
-                            ctx.lineTo(225,150);
-                            ctx.stroke();
-
-                            ctx.moveTo(250,200);
-                            ctx.lineTo(200,175);
-                            ctx.stroke();
-                        </script>
+                        <canvas id="miCanvas" width="300" height="300" style="border: 1px solid white;">
+                            Tu navegador no puede mostrar este contenido
+                        </canvas>
                     </div>
 
                 </div>
@@ -247,6 +197,9 @@
 
 
             </div>
+
+
+            <!-- Pestaña Conceptos -->
             <div role="tabpanel" class="tab-pane" id="conceptos">
 
                 <div class="row margin-top">
@@ -274,9 +227,99 @@
                 </div>
 
             </div>
+
+            <!-- Pestaña Conversor de unidades -->
+            <div role="tabpanel" class="tab-pane" id="conversion">
+
+                <div class="row margin-top2">
+                    <div class="col-md-2">
+                        <ul class="sin-item font-size">
+                            <li>Peso</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato" id="input-pesoconversion">
+                    </div>
+
+                    <div class="col-md-3">
+                        <ul class="sin-item">
+                            <select class="form-control" name="Calculos" id="select-conversionpeso">
+                                <option value="4">Gramos</option>
+                                <option value="5">Toneladas</option>
+                            </select>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" id="resultado-conversionpeso" type="text" placeholder="Kilogramos" disabled>
+                    </div>
+                </div>
+
+
+                <div class="row margin-top2">
+                    <div class="col-md-2">
+                        <ul class="sin-item font-size">
+                            <li>Distancia</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato" id="input-distanciaconversion">
+                    </div>
+
+                    <div class="col-md-3">
+                        <ul class="sin-item">
+                            <select class="form-control" name="Calculos" id="select-conversiondistancia">
+                                <option value="6">Centimetros</option>
+                                <option value="7">Kilometros</option>
+                            </select>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" id="resultado-conversiondistancia" type="text" placeholder="Metros" disabled>
+                    </div>
+                </div>
+
+
+                <div class="row margin-top2">
+                    <div class="col-md-2">
+                        <ul class="sin-item font-size">
+                            <li>Tiempo</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" type="text" name="Ingrese Dato" id="input-tiempoconversion">
+                    </div>
+
+                    <div class="col-md-3">
+                        <ul class="sin-item">
+                            <select class="form-control" name="Calculos" id="select-conversiontiempo">
+                                <option value="8">Minutos</option>
+                                <option value="9">Horas</option>
+                            </select>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control" id="resultado-conversiontiempo" type="text" placeholder="Segundos" disabled>
+                    </div>
+                </div>
+                <div class="row margin-top3">
+                    <div class="col-md-offset-4 col-md-3">
+                <button type="button" class="btn btn-success btn-primary  btn-md btn-block"  id="cucalcular" onclick="calcular2()">Calcular</button>
+                    </div>
+                    </div>
+            </div>
     </div>
 
 </div>
-
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script><!--primero se añade jquery despues bootstrap-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/formularios.js"></script> <!-- Validacion de formularios -->
+    <script type="text/javascript" src="js/calculos.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
 </body>
 </html>

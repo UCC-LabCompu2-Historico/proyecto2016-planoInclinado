@@ -6,7 +6,6 @@
 
 $(document).on("ready",function ()
 {
-    //Tomo los valores que hay en cada input y los igualo a una variable 
     //NOTA: .value significa que toma el valor
 
     $("#input-peso-figura").keyup(function () {
@@ -57,6 +56,42 @@ $(document).on("ready",function ()
         else
         {
          $("#input-tiempo").removeClass("red");
+        }
+    });
+
+    $("#input-pesoconversion").keyup(function () {
+        var pesoconversion = document.getElementById("input-pesoconversion").value;
+        if(isNaN(pesoconversion))
+        {
+            $("#input-pesoconversion").addClass("red");
+        }
+        else
+        {
+            $("#input-pesoconversion").removeClass("red");
+        }
+    });
+
+    $("#input-distanciaconversion").keyup(function () {
+        var distanciaconversion = document.getElementById("input-distanciaconversion").value;
+        if(isNaN(distanciaconversion))
+        {
+            $("#input-distanciaconversion").addClass("red");
+        }
+        else
+        {
+            $("#input-distanciaconversion").removeClass("red");
+        }
+    });
+
+    $("#input-tiempoconversion").keyup(function () {
+        var tiempoconversion = document.getElementById("input-tiempoconversion").value;
+        if(isNaN(tiempoconversion))
+        {
+            $("#input-tiempoconversion").addClass("red");
+        }
+        else
+        {
+            $("#input-tiempoconversion").removeClass("red");
         }
     });
 });
