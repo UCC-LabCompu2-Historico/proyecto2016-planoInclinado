@@ -23,16 +23,17 @@ $(document).on("ready",function ()
 
 
     $("#input-angulo").keyup(function (){
-
         var angulo = document.getElementById("input-angulo").value;
-        if(isNaN(angulo))
+        if(isNaN(angulo) || angulo>60)
         {
             $("#input-angulo").addClass("red");
+            alert("***PRECAUCION***\n\nEl angulo ingresado no es correcto.\nDebe ser menor a 60°.");
         }
         else
         {
             $("#input-angulo").removeClass("red");
         }
+
     });
 
     $("#input-distancia").keyup(function () {
