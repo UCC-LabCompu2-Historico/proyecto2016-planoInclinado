@@ -16,6 +16,7 @@ function calcular() {
 
         //CANVAS
         var opuesto=Math.abs(Math.tan(radianes)*300);
+        //Triangulo
         context.beginPath();
         context.moveTo(0,0);
         context.lineTo(0,opuesto);
