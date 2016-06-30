@@ -1,7 +1,3 @@
-/**
- * Created by Enzo on 09/06/2016.
- */
-
 //En este archivo validamos los formularios (damos error si el usuario ingresa algo que no sea un numero. (isNaN)
 
 $(document).on("ready",function ()
@@ -10,15 +6,15 @@ $(document).on("ready",function ()
 
     $("#input-peso-figura").keyup(function () {
 
-        var peso = document.getElementById("input-peso-figura").value; 
-       if(isNaN(peso))
-       {
-           $("#input-peso-figura").addClass("red");
-       }
+        var peso = document.getElementById("input-peso-figura").value;
+        if(isNaN(peso))
+        {
+            $("#input-peso-figura").addClass("red");
+        }
         else
-       {
-           $("#input-peso-figura").removeClass("red");
-       }
+        {
+            $("#input-peso-figura").removeClass("red");
+        }
     });
 
 
@@ -56,7 +52,7 @@ $(document).on("ready",function ()
         }
         else
         {
-         $("#input-tiempo").removeClass("red");
+            $("#input-tiempo").removeClass("red");
         }
     });
 

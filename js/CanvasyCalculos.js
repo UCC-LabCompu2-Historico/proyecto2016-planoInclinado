@@ -5,8 +5,8 @@ function calcular() {
     var angulovalor=document.getElementById("input-angulo").value;
     var radianes=angulovalor*Math.PI/180;
     context.clearRect(0,0,700,700);
-    
-    
+
+
     //Calculo de coeficiente de fricción entre la figura y el plano
     if(document.getElementById("select-calculos").value == 1) {
         var resultado=document.getElementById("resultado").value;
@@ -18,10 +18,19 @@ function calcular() {
         var opuesto=Math.abs(Math.tan(radianes)*300);
         //Triangulo
         context.beginPath();
+
         context.moveTo(0,0);
         context.lineTo(0,opuesto);
-
         context.lineTo(300,opuesto);
+
+        context.closePath();
+        context.stroke();
+
+        //Figura
+        context.beginPath();
+        context.moveTo(300/3,opuesto/3);
+        context.lineTo(300/4,opuesto/4);
+        context.lineTo(300/3,opuesto/5);
         context.closePath();
         context.stroke();
     }
@@ -39,13 +48,23 @@ function calcular() {
 
         //CANVAS
         var opuesto=Math.abs(Math.tan(radianes)*300);
+        //Triangulo
         context.beginPath();
+
         context.moveTo(0,0);
         context.lineTo(0,opuesto);
-
         context.lineTo(300,opuesto);
+
         context.closePath();
-        context.stroke()
+        context.stroke();
+
+        //Figura
+        context.beginPath();
+        context.moveTo(300/3,opuesto/3);
+        context.lineTo(300/4,opuesto/4);
+        context.lineTo(300/3,opuesto/5);
+        context.closePath();
+        context.stroke();
 
 
     }
@@ -59,13 +78,23 @@ function calcular() {
 
         //CANVAS
         var opuesto=Math.abs(Math.tan(radianes)*300);
+        //Triangulo
         context.beginPath();
+
         context.moveTo(0,0);
         context.lineTo(0,opuesto);
-
         context.lineTo(300,opuesto);
+
         context.closePath();
-        context.stroke()
+        context.stroke();
+
+        //Figura
+        context.beginPath();
+        context.moveTo(300/3,opuesto/3);
+        context.lineTo(300/4,opuesto/4);
+        context.lineTo(300/3,opuesto/5);
+        context.closePath();
+        context.stroke();
     }
 
 }
@@ -108,7 +137,3 @@ function calcular2() {
         document.getElementById("resultado-conversiontiempo").value= document.getElementById("input-tiempoconversion").value * 3600 +" Segundos";
     }
 }
-
-
-
-
